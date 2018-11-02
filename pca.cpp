@@ -144,10 +144,10 @@ void pca::set_eigen(){
   this->covariance_matrix[1][0],
   this->covariance_matrix[1][1];
   std::cout << "Here is the matrix A:\n" << A << std::endl;
-   SelfAdjointEigenSolver<Matrix2f> eigensolver(A);
-   if (eigensolver.info() != Success) abort();
-   std::cout << "The eigenvalues of A are:\n" << eigensolver.eigenvalues() << std::endl;
-   std::cout << "Here's a matrix whose columns are eigenvectors of A \n"
-        << "corresponding to these eigenvalues:\n"
-        << eigensolver.eigenvectors() << std::endl;
+  SelfAdjointEigenSolver<Matrix2f> eigensolver(A);
+  if (eigensolver.info() != Success) abort();
+  std::cout << "The eigenvalues of A are:\n" << eigensolver.eigenvalues() << std::endl;
+  std::cout << "Here's a matrix whose columns are eigenvectors of A \n"
+  << "corresponding to these eigenvalues:\n"
+  << eigensolver.eigenvectors() << std::endl;  
 }
